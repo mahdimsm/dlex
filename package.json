@@ -16,7 +16,8 @@
     "react-country-flag": "^3.1.0",
     "react-dom": "^18",
     "react-progressbar-circle": "^1.0.6",
-    "react-progressbar-semicircle": "^1.2.1"
+    "react-progressbar-semicircle": "^1.2.1",
+    "recharts": "^2.13.3"
   },
   "devDependencies": {
     "@types/node": "^20",

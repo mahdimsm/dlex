@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  min-height: 335px;
+  background-color: rgba(255, 255, 255, 1);
+  border: rgba(230, 231, 233, 1);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  grid-column: span 1 / span 1;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-column: span 2 / span 2;
+  }
+}
+/* text above the chart */
+.text_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.summary {
+  color: rgba(24, 24, 25, 0.9);
+  font-size: 8px;
+  font-weight: 500;
+}
+.mounth {
+  color: rgba(24, 24, 25, 0.42);
+  font-size: 7px;
+  font-weight: 400;
+}
+.title {
+  color: rgba(24, 24, 25, 0.42);
+  font-size: 6px;
+  font-weight: 500;
+  display: inline-block;
+}
+.price {
+  color: rgba(24, 24, 25, 0.9);
+  font-size: 8px;
+  font-weight: 500;
+}
+.text_box::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: rgba(255, 100, 34, 1); /* Change to your desired color */
+  border-radius: 50%; /* Makes it a circle */ /* Adds the hand cursor */
+  display: inline-block; /* Makes it a block element with inline properties */
+  top: 3px;
+  left: -15px;
+  position: absolute;
+}
+.circle_blue::before {
+  background-color: rgba(56, 85, 179, 1);
+}
+
+@media (min-width: 480px) {
+  .summary {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .mounth {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .title {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .text_box::before {
+    width: 8px;
+    height: 8px;
+    top: 5px;
+  }
+
+  .price {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+/*  */
