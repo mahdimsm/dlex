@@ -1,0 +1,72 @@
+.container {
+  width: 100%;
+  min-height: 335px;
+  background-color: rgba(255, 255, 255, 1);
+  border: rgba(230, 231, 233, 1);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.rate_number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 40%;
+  max-height: 40%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.p_rate_number {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4de6;
+  line-height: 25px;
+}
+.p_rate_text {
+  font-size: 6px;
+  font-weight: 400;
+  color: rgba(24, 24, 25, 0.42);
+}
+
+.zero {
+  color: rgba(24, 24, 25, 0.42);
+  font-size: 6px;
+  font-weight: 400;
+  position: absolute;
+  left: -13%;
+  top: 60%;
+}
+
+.onehundred {
+  color: rgba(24, 24, 25, 0.42);
+  font-size: 6px;
+  font-weight: 400;
+  position: absolute;
+  right: -18%;
+  top: 60%;
+}
+
+@media (min-width: 300px) {
+  .p_rate_number {
+    font-size: 28px;
+
+    line-height: 33px;
+  }
+  .p_rate_text {
+    font-size: 12px;
+  }
+  .zero {
+    font-size: 12px;
+  }
+  .onehundred {
+    font-size: 12px;
+  }
+}

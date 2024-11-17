@@ -1,0 +1,22 @@
+.listcountry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  gap: 12px;
+  position: relative;
+}
+
+.listcountry::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 85%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.listcountry:last-child::after {
+  display: none; /* Remove the border for the last item */
+}
