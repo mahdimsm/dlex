@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  width: 100%;
+}
+.sidebar_parent {
+  display: none;
+  background-color: #3c38ce;
+  padding: 24px;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.sidebar_parent::-webkit-scrollbar {
+  display: none;
+} /* Hide scrollbar for Chrome, Safari and Opera */
+.content {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.below_top_navbar_content {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 29px;
+}
+
+/* for set sidebar and content */
+@media (min-width: 1440px) {
+  .sidebar_parent {
+    display: block;
+    width: 17.2%;
+    min-width: 248px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+  .content {
+    width: 82.8%;
+  }
+
+  .below_top_navbar_content {
+    padding-left: 48px;
+    padding-right: 48px;
+    margin-top: 48px;
+  }
+}
+/*  */
+
+/* for set max strech in 360 to up and 768 to up and 1440 to up */
+@media (min-width: 1440px) {
+  .below_top_navbar_content {
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 29px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .below_top_navbar_content {
+    max-width: 850px;
+    margin: auto;
+    margin-top: 29px;
+  }
+}
+@media (max-width: 768px) {
+  .below_top_navbar_content {
+    max-width: 550px;
+    margin: auto;
+    margin-top: 29px;
+  }
+}
+
+/*  */

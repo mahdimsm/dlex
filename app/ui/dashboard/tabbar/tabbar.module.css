@@ -1,0 +1,42 @@
+.tab_bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Hide the tab bar on screens wider than 1440px */
+@media (min-width: 1440px) {
+  .tab_bar {
+    display: none;
+  }
+}
+
+/* Individual tab style */
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #696f8c; /* Adjust the color as needed */
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Icon style */
+.icon {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* Active tab styling (optional) */
+.tab.active {
+  color: #333;
+  font-weight: bold;
+}
