@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    gap: 12px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    position: relative;
+}
+.container:hover, .active{
+    color: #FFFFFF;
+}

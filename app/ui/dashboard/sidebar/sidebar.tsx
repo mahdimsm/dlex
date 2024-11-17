@@ -1,3 +1,4 @@
+import MenuLink from "./menuLink/menuLink";
 import styles from "./sidebar.module.css";
 import Image from "next/image";
 import dlex from "@/public/dlex.png";
@@ -148,11 +149,101 @@ const menuItems = [
   },
 ];
 
-
 export default function Sidebar() {
   return (
     <div className={styles.container}>
-     
+      <div>
+        <Image
+          alt="Dlex"
+          src={dlex}
+          style={{ width: "auto", height: "auto" }}
+          className="min-h-8 min-w-[80px]"
+        ></Image>
+        <div className="w-[0.8] min-w-[200px] h-[1.03px] bg-[#E6E7E9]/[0.42] my-6"></div>
+        <div className="flex items-center w-[0.8] min-w-[200px] h-[71px] justify-between bg-[#4A4DE6] rounded-md py-[17px] px-[11px]">
+          <div className="flex gap-[12px] items-center">
+            <div className="w-8 h-8 bg-[#ECD348] flex justify-center items-center rounded-full text-black text-[12px] ">
+              DW
+            </div>
+            <div className="flex flex-col gap-[1px]">
+              <h6 className="text-[14px] text-white">Dlex Designs</h6>
+              <p className="text-[12px] text-white/[0.42]">general team</p>
+            </div>
+          </div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="size-8 "
+          >
+            <path
+              fillRule="evenodd"
+              d="M11.47 4.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 0 1-1.06-1.06l3.75-3.75Zm-3.75 9.75a.75.75 0 0 1 1.06 0L12 17.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0l-3.75-3.75a.75.75 0 0 1 0-1.06Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </div>
+        <ul>
+          {menuItems.map((cat) => (
+            <li key={cat.title}>
+              <span className="text-[12px] font-medium text-[#FFFFFF6B]/[0.42] pt-6 block">
+                {cat.title}
+              </span>
+              {cat.list.map((item) => (
+                <MenuLink item={item} key={item.title} />
+              ))}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <div className="flex flex-col  w-[0.8] min-w-[200px] h-[100px] bg-[#342BC2] rounded-md p-[21px]">
+          <div className="flex justify-between">
+            <span className="text-white ">Storage</span>
+            <span className="text-[#CACCF7] ">Upgrade</span>
+          </div>
+          <div>
+            <span className="text-white">3.4 GB</span>
+            <span className="text-[#E6E7E9]/[0.42]"> of 15 GB</span>
+          </div>
+          <div className="w-[0.8] min-w-[158px] bg-[#4544DA] rounded-full h-[3px] mt-2.5">
+            <div
+              className="bg-[#CACCF7] h-[3px] rounded-full dark:bg-blue-500"
+              style={{ width: "15%" }}
+            ></div>
+          </div>
+        </div>
+
+        <div className="w-[0.8] min-w-[200px] h-[1.03px] bg-[#E6E7E9]/[0.42] my-6"></div>
+
+        <div className="flex items-center w-[0.8] mb-2 min-w-[200px] h-[71px] justify-between rounded-md py-[17px] px-[11px]">
+          <div className="flex gap-[12px] items-center">
+            <Image
+              alt="person"
+              src={person}
+              style={{ width: "auto", height: "auto" }}
+              className="min-h-10 min-w-10"
+            ></Image>
+            <div className="flex flex-col gap-[1px]">
+              <h6 className="text-[14px] text-white">John Smith</h6>
+            </div>
+          </div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="size-8 "
+          >
+            <path
+              fillRule="evenodd"
+              d="M11.47 4.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 0 1-1.06-1.06l3.75-3.75Zm-3.75 9.75a.75.75 0 0 1 1.06 0L12 17.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0l-3.75-3.75a.75.75 0 0 1 0-1.06Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }
